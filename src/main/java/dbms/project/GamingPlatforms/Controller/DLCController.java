@@ -43,8 +43,7 @@ public class DLCController {
         existingDLC.setName(updatedDLC.getName());
         existingDLC.setDescription(updatedDLC.getDescription());
         existingDLC.setPrice(updatedDLC.getPrice());
-        //TODO: Find a fix for update function
-        //existingDLC.setGame(updatedDLC.getGame());
+        existingDLC.setGame(updatedDLC.getGame());
         return repository.save(existingDLC);
     }
 }

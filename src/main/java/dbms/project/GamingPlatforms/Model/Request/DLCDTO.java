@@ -1,5 +1,6 @@
 package dbms.project.GamingPlatforms.Model.Request;
 
+import dbms.project.GamingPlatforms.Model.Game;
 import lombok.*;
 
 @AllArgsConstructor
@@ -12,4 +13,6 @@ public class DLCDTO {
     private String description;
 
     private int price;
+
+    private Game game;
 }

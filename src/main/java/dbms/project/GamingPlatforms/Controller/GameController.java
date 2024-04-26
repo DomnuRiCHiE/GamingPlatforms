@@ -46,10 +46,9 @@ public class GameController {
         existingGame.setAgeRestriction(updatedGame.getAgeRestriction());
         existingGame.setGameFileSizeInGB(updatedGame.getGameFileSizeInGB());
         existingGame.setAchievementNumber(updatedGame.getAchievementNumber());
-        //TODO: Find a fix for update function
-        //existingGame.setDlcs(updatedGame.getDlcs);
-        //existingGame.setGenres(updatedGame.getGenres());
-        //existingGame.setPlatforms(updatedGame.getPlatforms());
+        existingGame.setDlcs(updatedGame.getDlcs());
+        existingGame.setGenres(updatedGame.getGenres());
+        existingGame.setPlatforms(updatedGame.getPlatforms());
         return repository.save(existingGame);
     }
 }

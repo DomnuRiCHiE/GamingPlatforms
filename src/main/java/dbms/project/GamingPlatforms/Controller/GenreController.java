@@ -41,8 +41,7 @@ public class GenreController {
         Genre existingGenre = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Genre with id " + id + " not found"));
         existingGenre.setName(updatedGenre.getName());
-        //TODO: Find a fix for update function
-        //existingGenre.setGames(updatedGenre.getGames);
+        existingGenre.setGames(updatedGenre.getGames());
         return repository.save(existingGenre);
     }
 }

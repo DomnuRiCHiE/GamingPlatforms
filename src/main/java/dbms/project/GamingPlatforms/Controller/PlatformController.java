@@ -42,8 +42,7 @@ public class PlatformController {
                 .orElseThrow(() -> new RuntimeException("Game with id " + id + " not found"));
         existingPlatform.setName(updatedPlatform.getName());
         existingPlatform.setDateEstablished(updatedPlatform.getDateEstablished());
-        //TODO: Find a fix for update function
-        //existingPlatform.setGames(updatedPlatform.setGames);
+        existingPlatform.setGames(updatedPlatform.getGames());
         return repository.save(existingPlatform);
     }
 }
