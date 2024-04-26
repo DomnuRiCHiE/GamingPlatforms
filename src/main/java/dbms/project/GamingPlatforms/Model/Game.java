@@ -37,4 +37,20 @@ public class Game {
 
     @OneToMany(mappedBy = "game")
     private Set<DLC> dlcs;
+
+    @ManyToMany
+    @JoinTable(
+            name = "GenreGame",
+            joinColumns = @JoinColumn(name = "game_id"),
+            inverseJoinColumns = @JoinColumn(name = "genre_id")
+    )
+    private Set<Genre> genres;
+
+    @ManyToMany
+    @JoinTable(
+            name = "PlatformGame",
+            joinColumns = @JoinColumn(name = "game_id"),
+            inverseJoinColumns = @JoinColumn(name = "platform_id")
+    )
+    private Set<Platform> platforms;
 }

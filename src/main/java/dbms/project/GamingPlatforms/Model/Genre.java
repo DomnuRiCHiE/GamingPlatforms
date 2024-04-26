@@ -3,6 +3,8 @@ package dbms.project.GamingPlatforms.Model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "Genre")
 @AllArgsConstructor
@@ -16,4 +18,7 @@ public class Genre {
 
     @Column
     private String name;
+
+    @ManyToMany(mappedBy = "genres")
+    private Set<Game> games;
 }
