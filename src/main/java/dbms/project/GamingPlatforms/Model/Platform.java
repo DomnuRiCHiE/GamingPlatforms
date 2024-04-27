@@ -13,7 +13,8 @@ import java.util.Set;
 @Setter
 public class Platform {
     @Id
-    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(insertable = false, updatable = false)
     private Long id;
 
     @Column

@@ -11,6 +11,7 @@ import lombok.*;
 @Setter
 public class DLC {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(insertable = false, updatable = false)
     private Long id;
 
