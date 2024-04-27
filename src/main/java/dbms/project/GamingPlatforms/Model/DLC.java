@@ -11,7 +11,7 @@ import lombok.*;
 @Setter
 public class DLC {
     @Id
-    @Column
+    @Column(insertable = false, updatable = false)
     private Long id;
 
     @Column
