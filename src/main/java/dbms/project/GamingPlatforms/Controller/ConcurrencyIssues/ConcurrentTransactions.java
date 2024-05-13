@@ -1,5 +1,8 @@
 package dbms.project.GamingPlatforms.Controller.ConcurrencyIssues;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +12,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-//@RestController
+@RestController
 @RequestMapping("/api/concurrentTransactions")
 public class ConcurrentTransactions implements Runnable {
     private final Connection connection;
